@@ -1,0 +1,133 @@
+<mdb-carousel [controls]="true" [indicators]="true">
+  <mdb-carousel-item>
+    <img
+      src="https://donghotinnhiem.com/storage/2020/01/banner.jpg"
+      class="d-block w-100"
+      alt="..."
+    />
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <img
+      src="https://donghotinnhiem.com/storage/2020/03/slide1.jpg"
+      class="d-block w-100"
+      alt="..."
+    />
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <img
+      src="https://donghotinnhiem.com/storage/2020/03/slide4.jpg"
+      class="d-block w-100"
+      alt="..."
+    />
+  </mdb-carousel-item>
+</mdb-carousel>
+<!-- features list section -->
+<div class="list-section pt-80 pb-80">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+        <div class="list-box d-flex align-items-center">
+          <div class="list-icon">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <div class="content">
+            <h3>Miễn phí giao hàng</h3>
+            <p>Đối với hóa đơn trên 10 triệu</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+        <div class="list-box d-flex align-items-center">
+          <div class="list-icon">
+            <i class="fas fa-phone-volume"></i>
+          </div>
+          <div class="content">
+            <h3>Hỗ trợ 24/7</h3>
+            <p>luôn có độ hổ trợ cả ngày</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="list-box d-flex justify-content-start align-items-center">
+          <div class="list-icon">
+            <i class="fas fa-sync"></i>
+          </div>
+          <div class="content">
+            <h3>Hoàn trả</h3>
+            <p>Đổi trả trong vòng 3 ngày!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- end features list section -->
+
+<!-- product section -->
+<div class="product-section mt-150 mb-150">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <div class="section-title">
+          <h3><span class="orange-text">Top</span> Sản phẩm</h3>
+          <p>Top sản phẩm được bán trong tuần qua.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <ul class="products"  >
+        <li  *ngFor="let i of [0,1,2,3]">
+          <div class="product-item" style="margin-top: 20px;">
+            <div class="product-top">
+              <a routerLink="" routerLinkActive="active" class="product-thumb">
+                <img src="" alt="">
+              </a>
+              <input routerLink="/pay"  routerLinkActive="active" type="button" value="mua ngay" class="btn-info">
+              <input type="button"  value="thêm vào giỏ hàng" class="btn-info1">
+            </div>
+            <div class="product-info">
+              <a href="" class="product-cat"></a>
+              <a routerLink="/product-detail/" class="product-name"></a>
+              <div class="product-price"> VND</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end product section -->
+
+<div class="latest-news pt-150 pb-150">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <div class="section-title">
+          <h3><span class="orange-text">Blogs</span> mới</h3>
+          <p>Các bài blog review về đồng hồ hot nhất hiện nay.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6" *ngFor="let i of [0,1,2]">
+        <div class="single-latest-news">
+          <a routerLink="/blogs/" routerLinkActive="active"><img src="" class="latest-news-bg"></a>
+          <div class="news-text-box">
+            <h3><a routerLink="/blogs/" routerLinkActive="active"></a></h3>
+            <p class="blog-meta">
+              <span class="author"><i class="fas fa-user"></i></span>
+              <span class="date"><i class="fas fa-calendar"></i></span>
+            </p>
+            <p class="excerpt"></p>
+            <a routerLink="/blogs/" routerLinkActive="active" class="read-more-btn">Đọc tiếp <i class="fas fa-angle-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
