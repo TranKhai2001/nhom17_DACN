@@ -1,0 +1,44 @@
+<div id="wrapper">
+  <form action="" [formGroup]="registerForm" (ngSubmit) = "register()" id="form-login">
+    <h1 class="form-heading">ĐĂNG KÍ</h1>
+    <div class="form-group">
+      <input type="text" id="customer_name" class="form-input" formControlName="name"  placeholder="Họ và tên">
+
+    </div>
+    <div class="form-group">
+      <input type="text" id="customer_user_name" class="form-input" formControlName="user_name" placeholder="Tên đăng nhập">
+
+    </div>
+    <div class="form-group">
+      <input type="text" id="customer_email" class="form-input" formControlName="user_email" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <input type="tel" id="customer_tel" class="form-input"  formControlName="phone" value="" placeholder="Số điện thoại">
+    </div>
+    <div class="form-group">
+      <input type="text" id="customer_gender" class="form-input" formControlName="sex" placeholder="Giới tính">
+    </div>
+    <div class="form-input">
+      <div>Ngày sinh:</div>
+      <input class="from-input" id="customer_birth" type="date" formControlName="user_birth" value="">
+    </div>
+    <div class="form-group">
+      <input type="password" id="password" class="form-input" formControlName="user_password" placeholder="Mật khẩu">
+      <div id="eye">
+        <i class="far fa-eye"></i>
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="password" id="password1" class="form-input" formControlName="user_password1" placeholder="Nhập lại mật khẩu">
+      <p style="color: red">{{err}}</p>
+      <div id="eye1">
+        <i class="far fa-eye"></i>
+      </div>
+    </div>
+
+
+    <!--    <input type="button" value="Đăng kí" class="form-button">-->
+    <button type="submit" class="form-button">Register</button>
+
+  </form>
+</div>
