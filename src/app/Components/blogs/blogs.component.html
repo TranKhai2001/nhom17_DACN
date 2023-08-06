@@ -1,0 +1,78 @@
+<div id="blogs">
+  <div class="Name-Page">
+    <img src="/assets/image/namePage.jpg" alt="">
+    <h1 class="Name">Blogs</h1>
+  </div>
+  <div class="Frame">
+    <div class="List-Funtions">
+      <a routerLink="/" routerLinkActive="active">Trang chủ</a>
+      <p>/</p>
+      <a hrouterLink="/blogs" routerLinkActive="active">Blogs</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row ">
+      <!-- =====  BANNER STRAT  ===== -->
+      <!-- =====  BREADCRUMB END===== -->
+      <div id="column-left" class="col-sm-4 col-lg-3 hidden-xs">
+        <div id="category-menu" class="navbar collapse in mb_40" aria-expanded="true" style="" role="button">
+          <div class="nav-responsive">
+            <div class="heading-part">
+              <h2 class="main_title">Top category</h2>
+            </div>
+            <ul class="nav  main-navigation collapse in">
+              <li> <a > Thiết bị </a> </li>
+              <li> <a > Điện thoại Di động </a> </li>
+              <li> <a > Máy tính bảng & phụ kiện </a> </li>
+              <li> <a > Điện tử Gia dụng </a> </li>
+              <li> <a > Máy tính & Mạng </a> </li>
+              <li> <a > Điện & Dụng cụ </a> </li>
+              <li> <a > Trang phục </a> </li>
+              <li> <a > Túi & Giày </a> </li>
+              <li> <a > Đồ chơi & Sở thích </a> </li>
+              <li> <a > Đồng hồ & Trang sức </a> </li>
+              <li> <a > Nhà và Vườn </a> </li>
+              <li> <a > Sức khỏe & Sắc đẹp </a> </li>
+              <li> <a > Ngoài trời & Thể thao </a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="left_banner left-sidebar-widget mt_30 mb_40"> <a ><img src="/assets/image/left1.jpg" alt="Left Banner" class="img-responsive" /></a> </div>
+      </div>
+      <div class="col-sm-8 col-lg-9 mtb_20">
+        <div class="row">
+          <div class="three-col-blog text-left" >
+            <div class="blog-item col-md-6 mb_30" >
+
+              <div class="post-format">
+                <div class="thumb post-img"><a routerLink="/blogs/" routerLinkActive="active"> <img src=""  alt="themini"></a></div>
+                <div class="post-type"><i class="fa fa-music" aria-hidden="true"></i></div>
+              </div>
+              <div class="post-info mtb_20 ">
+                <h3 class="mb_10"> <a routerLink="/blogs/" routerLinkActive="active"></a> </h3>
+                <p></p>
+                <div class="details mtb_20">
+                  <div class="date pull-left"> <i class="fa fa-calendar" aria-hidden="true"></i></div>
+                  <div class="more pull-right"> <a routerLink="/blogs/" routerLinkActive="active">Độc tiếp <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pagination-controls id="product_pagination"
+                             (pageChange)="page1 = $event"
+
+        ></pagination-controls>
+        <!--      <div class="pagination-nav text-center mtb_20">-->
+        <!--        <ul>-->
+        <!--          <li><a ><i class="fa fa-angle-left"></i></a></li>-->
+        <!--          <li class="active"><a >1</a></li>-->
+        <!--          <li><a >2</a></li>-->
+        <!--          <li><a >3</a></li>-->
+        <!--          <li><a ><i class="fa fa-angle-right"></i></a></li>-->
+        <!--        </ul>-->
+        <!--      </div>-->
+      </div>
+    </div>
+  </div>
+</div>
