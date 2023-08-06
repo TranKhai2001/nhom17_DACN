@@ -1,0 +1,139 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+header {
+  height: 40px;
+  background: #1E2024;
+}
+header .one {
+  float: left;
+  clear: right;
+}
+header .one .account li {
+  list-style-type: none;
+  float: left;
+  clear: right;
+}
+header .one .account li p {
+  padding: 7px 35px;
+  border-right: 1px solid #b0acac;
+  text-decoration: none;
+  color: #b0acac;
+  margin: 0px;
+}
+header .one .account li p:hover {
+  color: #FFCC00;
+}
+header .two {
+  float: right;
+  clear: none;
+}
+header .two .icon .nav-item {
+  margin-right: 20px;
+  list-style-type: none;
+  float: left;
+  clear: right;
+}
+header .two .icon .nav-item .nav-link .fab {
+  color: #b0acac;
+}
+header .two .icon .nav-item .nav-link .fab > .fa-youtube {
+  margin-right: 38px;
+}
+
+#my-nav {
+  height: 130px;
+}
+#my-nav .logo {
+  width: 45%;
+  float: left;
+  clear: right;
+}
+#my-nav .ad {
+  float: right;
+  clear: none;
+  width: 55%;
+}
+#my-nav .ad img {
+  width: 690px;
+  margin-top: 10px;
+  height: 95px;
+  text-align: center;
+}
+
+#function {
+  height: 60px;
+  background: #1E2024;
+  margin-top: -16px;
+  overflow: auto;
+}
+#function .menu .big-menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+#function .menu .big-menu p {
+  font-size: 19px;
+  padding: 15px 30px;
+  color: white;
+  margin: 0px;
+}
+#function .menu .big-menu p:hover {
+  background: #FFCC00;
+  cursor: pointer;
+}
+#function .menu .big-menu p li {
+  text-decoration: none;
+}
+#function .menu .big-menu p:hover a {
+  color: black;
+}
+#function .menu .big-menu:hover li .small-menu {
+  display: block;
+}
+#function .menu .big-menu li .small-menu li .item {
+  color: white;
+}
+#function .menu .big-menu .search {
+  margin-top: 15px;
+  margin-left: 250px;
+}
+#function .menu .big-menu .search input {
+  width: 250px;
+  height: 30px;
+  outline: none;
+}
+#function .menu .big-menu .icon-search {
+  background: #FFCC00;
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  margin-top: 15px;
+}
+#function .menu .big-menu .icon-search .fa-search {
+  padding: 8px;
+}
+#function .menu .big-menu .icon-cart {
+  height: 35px;
+  width: 50px;
+  text-align: center;
+  margin-top: 13px;
+  margin-left: 60px;
+}
+#function .menu .big-menu .icon-cart .fa-shopping-cart {
+  color: white;
+  padding: 5px;
+  font-size: 25px;
+}
+
+.fas:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=header.component.css.map */
