@@ -1,0 +1,58 @@
+<header>
+  <div class="one">
+    <ul class="account">
+      <li><a ><p>Thông báo</p></a></li>
+      <li><a ><p>Hỗ trợ</p></a></li>
+      <li><a routerLink="/login" routerLinkActive="active" ><p>Đăng nhập</p></a></li>
+      <li><a routerLink="/register" routerLinkActive="active" ><p>Đăng ký</p></a></li>
+      <li><a routerLink="/user-profile" routerLinkActive="active" ><p>Xin chào:</p></a></li>
+      <li><a routerLinkActive="active"><p>Thoát</p></a></li>
+    </ul>
+  </div>
+  <div class="two">
+    <ul class="icon">
+      <li class="nav-item">
+        <a class="nav-link text-body" href="https://twitter.com/"><small class="fab fa-twitter"></small></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-body" href="https://www.facebook.com/"><small class="fab fa-facebook-f"></small></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-body" href="https://www.linkedin.com/"><small class="fab fa-linkedin-in"></small></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-body" href="https://www.instagram.com/"><small class="fab fa-instagram"></small></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-body" href="https://www.grammarly.com/"><small class="fab fa-google-plus-g"></small></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-body" href="https://www.youtube.com/"><small class="fab fa-youtube"></small></a>
+      </li>
+    </ul>
+  </div>
+</header>
+<nav id="my-nav">
+  <div class="logo">
+    <a routerLink="/" routerLinkActive="active" style="text-decoration: none"><h1 style="font-size: 37px;margin-left: 120px;margin-top: 40px"><b style="color: #FFCC00">CLOCK</b>SHOP</h1></a>
+  </div>
+  <div class="ad">
+    <a><img src="/assets/image/ad.png" alt=""></a>
+  </div>
+</nav>
+<nav id="function">
+  <div class="menu">
+    <ul class="big-menu">
+      <li ><a routerLink="/" routerLinkActive="active"><p>Trang chủ</p></a></li>
+      <li><a routerLink="/products" routerLinkActive="active"><p>Sản phẩm</p></a></li>
+      <li><a routerLink="/contact" routerLinkActive="active"><p>Liên hệ</p></a></li>
+      <li><a routerLink="/blogs" routerLinkActive="active"><p>Blogs</p></a></li>
+      <div class="search"><input type="text" placeholder="Tìm kiếm"></div>
+      <div class="icon-search"> <button><i class="fas fa-search"></i></button></div>
+      <a routerLink="/cart" routerLinkActive="active"><div class="icon-cart"><i class="fas fa-shopping-cart"><span class='badge badge-warning' id='lblCartCount'></span></i></div></a>
+      <!--      <a routerLink="/login" routerLinkActive="active" *ngIf="!loggined()"><div class="icon-cart"><i class="fas fa-shopping-cart"><span class='badge badge-warning' id='lblCartCountNoLogin'>{{totalproductIncart()}}</span></i></div></a>-->
+    </ul>
+  </div>
+</nav>
+
+
