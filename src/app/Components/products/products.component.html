@@ -1,1 +1,100 @@
+<form action="" method="post" class="form-inline" [formGroup]="searchForm" (ngSubmit)="ngOnInit()">
+  <div class="search">
+    <input type="text" placeholder="Tìm kiếm" formControlName="name">
+    <button type="submit"><i class="fas fa-search"></i></button>
+  </div>
+</form>
+<div id ="wrapper">
+  <div id ="wrapperLeft">
+
+    <ul>
+
+      <li>
+        <div class="text-wrapperLeft">Lọc theo loại</div>
+        <div>
+          <input (click)="filter('')" type="button" value="tất cả đồng hồ" class="btn-wrapperLeft">
+        </div>
+      </li>
+      <li>
+        <div>
+          <input type="button" value="đồng hồ đeo tay" class="btn-wrapperLeft">
+        </div>
+        <ul class="btn-lv2">
+          <div>
+            <li><input (click)="filter('đồng hồ nam')" type="button" value="đồng hồ nam" class="btn-wrapperLeft"></li>
+          </div>
+          <div>
+            <li><input (click)="filter('đồng hồ nữ')" type="button" value="đồng hồ nữ" class="btn-wrapperLeft"></li>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <div>
+          <input (click)="filter('đồng hồ treo tường')" type="button" value="đồng hồ treo tường" class="btn-wrapperLeft">
+
+        </div>
+      </li>
+    </ul>
+    <div id="wrapperLeft3">
+      <div class="text-wrapperLeft">Lọc theo hãng</div>
+
+      <input (click)="filterByTrademark('Casio')" type="button" value="Casio" class="btn-wrapperLeft3">
+      <input (click)="filterByTrademark('Citizen')" type="button" value="Citizen" class="btn-wrapperLeft3">
+      <input (click)="filterByTrademark('Orient')" type="button" value="Orient" class="btn-wrapperLeft3">
+      <input (click)="filterByTrademark('Tissot')" type="button" value="Tissot" class="btn-wrapperLeft3">
+      <input (click)="filterByTrademark('Daniel Wellington')" type="button" value="Daniel Wellington" class="btn-wrapperLeft3">
+      <input (click)="filterByTrademark('Saga')" type="button" value="Saga" class="btn-wrapperLeft3">
+    </div>
+    <div id="wrapperLeft2">
+      <div class="text-wrapperLeft">Lọc theo giá</div>
+
+      <input (click)="filterByRate(0,1000000)" type="button" value="Dưới 1 triệu" class="btn-loc">
+      <input (click)="filterByRate(1000000,3000000)" type="button" value="Từ 1-3 triệu" class="btn-loc">
+      <input (click)="filterByRate(3000000,6000000)" type="button" value="Từ 3-6 triệu" class="btn-loc">
+      <input (click)="filterByRate(6000000,11000000)" type="button" value="Từ 6-10 triệu" class="btn-loc">
+      <input (click)="filterByRate(10000000,15000000)" type="button" value="Từ 10-15 triệu" class="btn-loc">
+      <input (click)="filterByRate(15000000,20000000)" type="button" value="Từ 15-20 triệu" class="btn-loc">
+      <input (click)="filterByRate(20000000,30000000)" type="button" value="Từ 20-30 triệu" class="btn-loc">
+      <input (click)="filterByRate(30000000,50000000)" type="button" value="Từ 30-50 triệu" class="btn-loc">
+      <input (click)="filterByRate(50000000,100000000)" type="button" value="Từ 50-100 triệu" class="btn-loc">
+      <input (click)="filterByRate(100000000,800000000)" type="button" value="Trên 100 triệu" class="btn-loc">
+
+    </div>
+  </div>
+  <div id="wrapperRight">
+    <div class="headline">
+      <h3>danh sách sản phẩm</h3>
+    </div>
+
+    <ul class="products"  >
+      <li *ngFor="let products of  cart| paginate: {
+                  id:'product_pagination',
+               itemsPerPage: 12,
+               currentPage: page1,
+              totalItems: totalProducts }">
+        <div class="product-item">
+
+          <div class="product-top">
+            <a href="" class="product-thumb" routerLink="/product-detail/{{products.id}}">
+              <img src="{{products.img}}" alt="">
+            </a>
+            <input type="button" routerLink="/pay" (click)=addtocart(products)  routerLinkActive="active" value="mua ngay" class="btn-info">
+            <input type="button" (click)=addtocart(products) value="thêm vào giỏ hàng" class="btn-info1">
+          </div>
+          <div class="product-info">
+            <a href="" class="product-cat" routerLink="/blogs/{{products.id}}">{{products.type}}</a>
+            <a href="" class="product-cat" routerLink="/blogs/{{products.id}}">{{products.trademark}}</a>
+
+            <a href="" class="product-name" routerLink="/product-detail/{{products.id}}">{{products.name}}</a>
+            <div class="product-price">{{products.rate}} VND</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <pagination-controls id="product_pagination"
+                         (pageChange)="page1 = $event"
+    ></pagination-controls>
+  </div>
+
+</div>
 
