@@ -1,0 +1,19 @@
+<div id="wrapper">
+  <form [formGroup]="loginForm" (ngSubmit) = "login()" id="form-login">
+    <h1 class="form-heading">ĐĂNG NHẬP</h1>
+    <div class="form-group">
+      <i class="far fa-user"></i>
+      <input type="email" id="email" formControlName="email" class="form-input" placeholder="Tên đăng nhập">
+    </div>
+    <div class="form-group">
+      <i class="fas fa-key"></i>
+      <input type="password" id="password" formControlName="password" class="form-input" placeholder="Mật khẩu">
+      <div id="eye">
+        <i class="far fa-eye"></i>
+      </div>
+    </div>
+    <!--    <input type="button" value="Đăng nhập" class="form-button">-->
+    <button type="submit" class="form-button" style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+    <p style="color: red">{{err}}</p>
+  </form>
+</div>
