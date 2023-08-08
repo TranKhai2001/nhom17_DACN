@@ -7,9 +7,13 @@ import {FormGroup} from "@angular/forms";
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-
+  constructor() { }
 
   ngOnInit(): void {
   }
 
+  reload() {
+    window.location.reload();
+    alert("Đánh giá của bạn đã được ghi lại");
+  }
 }
