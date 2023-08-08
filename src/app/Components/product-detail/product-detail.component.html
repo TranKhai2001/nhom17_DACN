@@ -15,15 +15,15 @@
   <div class="Frame">
     <div class="Infor-Product" >
       <div class="Img-Product">
-        <img src="" alt="">
+        <img src="{{products?.img}}" alt="">
       </div>
       <div class="Infor">
-        <h5></h5>
-        <p>Đã bán: </p>
-        <p>Mã Số Sản Phẩm: </p>
-        <p>Giá: </p>
-        <p></p>
-        <h4 class="Button" >Thêm vào giỏ hàng</h4>
+        <h5>{{products?.name}}</h5>
+        <p>Đã bán: {{products?.sold}}</p>
+        <p>Mã Số Sản Phẩm: {{products?.product_code}}</p>
+        <p>Giá: {{products?.rate}}</p>
+        <p>{{products?.describe_product}}</p>
+        <h4 class="Button" (click)=addtocart(products)>Thêm vào giỏ hàng</h4>
       </div>
     </div>
   </div>
@@ -31,17 +31,17 @@
     <div class="Infor-Describe">
       <div class="Infor">
         <h1>Mô tả:</h1>
-        <p>Thương hiệu: </p>
-        <p>Xuất sứ:</p>
-        <p>Kính: </p>
-        <p>Máy: </p>
-        <p>Bảo Hành: </p>
-        <p>Đường Kính Mặt Số: </p>
-        <p>Bề Dày Mặt Số: </p>
-        <p>Dây Đeo: </p>
-        <p>Màu Mặt Số: </p>
-        <p>Chống Nước: </p>
-        <p>Nơi sản xuất (Tùy từng lô hàng): </p>
+        <p>Thương hiệu: {{products?.trademark}}</p>
+        <p>Xuất sứ: {{products?.origin_product}}</p>
+        <p>Kính: {{products?.glasses}}</p>
+        <p>Máy: {{products?.machine}}</p>
+        <p>Bảo Hành: {{products?.insurance}}</p>
+        <p>Đường Kính Mặt Số: {{products?.dial_diameter}}</p>
+        <p>Bề Dày Mặt Số: {{products?.dial_thickness}}</p>
+        <p>Dây Đeo: {{products?.strap}}</p>
+        <p>Màu Mặt Số: {{products?.dial_color}}</p>
+        <p>Chống Nước: {{products?.waterproof}}</p>
+        <p>Nơi sản xuất (Tùy từng lô hàng): {{products?.where_production}}</p>
       </div>
       <div class="Interactive">
         <div class="Share">
@@ -59,6 +59,10 @@
             <i class="fab fa-youtube" style="background: #fa0606;padding: 5px 7px"></i>
           </div>
         </div>
+        <app-comment
+          submitLabel="Write"
+          (handleSubmit)="addComment({text:$event,parentID:null})"
+        ></app-comment>
       </div>
 
     </div>

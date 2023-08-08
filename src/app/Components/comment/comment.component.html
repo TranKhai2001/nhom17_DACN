@@ -1,0 +1,24 @@
+<div class="Comment">
+  <div><h1>Bình luận:</h1></div>
+  <div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <input  formControlName="title"  type="text" style="width: 400px;height: 40px;border-radius:4px;outline: none;border:1px solid #8f8e8e" placeholder="Ghi bình luận của bạn vào đây:">
+      <button type="submit" (click)="refresh()" [disabled]="form.invalid" style="width: 90px;margin-left: 5px;height: 40px;border-radius: 4px;border:none;background: red;color: white">Bình luận</button>
+    </form>
+  </div>
+  <div class="Comment" *ngFor="let comment of comments| paginate: {
+                  id:'product_pagination',
+               itemsPerPage: 4,
+               currentPage: page1,
+              totalItems: totalComment }">
+    <div class="Account-Comment">
+      <h5>{{comment.userName}}<p style="width: 300px;font-size:10px;color: #8f8e8e;float: right;margin-top: 10px">{{comment.date}}</p> </h5>
+      <p>{{comment.body}}</p>
+    </div>
+  </div>
+  <div class="Amount-page">
+    <pagination-controls id="product_pagination"
+                         (pageChange)="page1 = $event"
+    ></pagination-controls>
+  </div>
+</div>
