@@ -10,12 +10,34 @@ import {CartService} from "../../service/cart.service";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  data:Array<any> = [];
+  top:Array<any> = [];
+  blogs:Array<any> = [];
+  constructor(private router:Router,private http:HttpClient,private apiService:ApiService, private cartService : CartService) { }
 
   ngOnInit(): void {
+    this.apiService.getProducts().subscribe(
+      (resp) => {
+        this.data = resp;
+        // this.top = resp;
+      });
+    this.apiService.getBlogs().subscribe(
+      (resp) => {
+        this.blogs = resp;
+        // this.top = resp;
+      });
+    this.topProduct();
 
   }
 
+  topProduct(){
+    this.data = this.data.sort((a, b) => a.rate - b.rate)
+  }
+
+
+  // addtocart(item: any){
+  //   this.cartService.addtoCart(item);
+  // }
 
 
 
