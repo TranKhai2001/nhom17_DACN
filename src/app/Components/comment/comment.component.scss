@@ -1,0 +1,31 @@
+.Comment {
+  margin-top: 30px;
+  > div {
+    margin-top: 20px;
+    > p {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.Account-Comment {
+  border: 1px solid #8f8e8e;
+  width: 500px;
+  border-radius: 4px;
+  > h5 {
+    margin-left: 20px;
+    border-bottom: 1px solid #8f8e8e;
+    width: 450px;
+  }
+}
+
+.Amount-page {
+  display: inline-flex;
+  margin-left: 120px;
+
+  > p:hover {
+    color: #FFCC00;
+    cursor: pointer;
+  }
+}
