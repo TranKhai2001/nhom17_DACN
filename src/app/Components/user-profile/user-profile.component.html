@@ -1,0 +1,57 @@
+<body>
+<div id="thongTin">
+  <div id="from-quanLi">
+    <div class="quanLi">
+      <div class="menu">
+        <h3>Quản lí tài khoản</h3>
+      </div>
+      <div class="box-menu">
+        <div  class="item-menu">
+          <input type="button" value="Thông tin tài khoản">
+        </div>
+        <div class="item-menu-2">
+          <input routerLink="/change-password" routerLinkActive="active" type="button" value="Đổi mật khẩu">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="from-thongTin">
+    <div class="heading">
+      <h2 class="from-heading">THÔNG TIN TÀI KHOẢN</h2>
+    </div>
+    <div class="from-avatar">
+      <div class="avatar">
+        <img src="https://mekongnama.com.vn/wp-content/uploads/2021/07/vuong-quoc-anh-1.jpg" alt="">
+        <div>
+          <input type="button" value="Thay đổi">
+        </div>
+      </div>
+      <div class="box-from">
+        <div class="from">
+          <label class="text">Email:</label>
+          <input class="from-input" type="email" readonly value="{{email}}">
+        </div>
+        <div class="from">
+          <label class="text">SDT:</label>
+          <input class="from-input"type="tel"  value="{{sdt}}">
+        </div>
+        <div class="from">
+          <label class="text">Họ Tên:</label>
+          <input class="from-input" type="text" readonly value="{{hoten}}">
+        </div>
+        <div class="from">
+          <label class="text">Giới tính:</label>
+          <input class="from-input" type="text" readonly value="{{gioitinh}}">
+        </div>
+        <div class="from">
+          <label class="text">Ngày sinh:</label>
+          <input class="from-input" type="date"  value="{{ngaysinh}}">
+        </div>
+        <div class="btn-capNhat">
+          <input type="button" value="cập nhật">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

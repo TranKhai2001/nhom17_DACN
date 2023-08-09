@@ -1,0 +1,149 @@
+#thongTin {
+  display: flex;
+  padding-top: 100px;
+  padding-left: 300px;
+  padding-bottom: 200px;
+}
+
+#from-quanLi {
+  max-width: 300px;
+  flex-grow: 1;
+  box-shadow: 0px 0px 17px 2px rgba(255, 255, 255);
+  padding-right: 20px;
+}
+
+.quanLi {
+  border: 1px solid black;
+  background: whitesmoke;
+
+  .menu h3 {
+    color: #5f5e5e;
+    border-bottom: 1px solid #5e6d81;
+    padding: 1px 5px;
+    max-width: 80%;
+  }
+}
+
+.item-menu input {
+  background: #858181;
+  border: 1px solid #f5f5f5;
+  color: #cb1f1f;
+  width: 100%;
+  height: 40px;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  transition: 0.25s ease-in-out;
+}
+
+.item-menu-2 input {
+  background: #858181;
+  border: 1px solid #f5f5f5;
+  color: #ffffff;
+  width: 100%;
+  height: 40px;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  transition: 0.25s ease-in-out;
+}
+
+.item-menu input:hover, .item-menu-2 input:hover {
+  background: gold;
+  cursor: pointer;
+}
+
+#from-thongTin {
+  max-width: 70%;
+  height: auto;
+  border-left: 3px solid #5f5e5e;
+  flex-grow: 1;
+  box-shadow: 0px 0px 17px 2px rgba(255, 255, 255);
+}
+
+.heading h2 {
+  border-bottom: 1px solid #5e6d81;
+  padding: 6px 10px;
+  max-width: 100%;
+}
+
+.from-avatar {
+  background: whitesmoke;
+  display: flex;
+}
+
+.avatar {
+  padding-left: 40px;
+
+  img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #5e6d81;
+    border-radius: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+  }
+
+  input {
+    background: #5f5e5e;
+    color: white;
+    margin-left: 10px;
+    width: 80px;
+    height: 25px;
+    border: 1px solid white;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+      background: gold;
+      cursor: pointer;
+    }
+  }
+}
+
+.box-from {
+  margin-left: 50px;
+}
+
+.from {
+  width: auto;
+  height: auto;
+  display: flex;
+  padding: 20px;
+}
+
+.text {
+  padding-top: 5px;
+  color: #444040;
+  font-size: 20px;
+  width: 100px;
+  height: 35px;
+}
+
+.from-input {
+  width: 450px;
+  height: 35px;
+  margin-left: 15px;
+}
+
+.btn-capNhat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+
+  input {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background: #5f5e5e;
+    border: 1px solid white;
+    color: white;
+    transition: 0.25s ease-in-out;
+    margin-bottom: 20px;
+
+    &:hover {
+      background: gold;
+      cursor: pointer;
+    }
+  }
+}
