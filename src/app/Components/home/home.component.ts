@@ -35,9 +35,9 @@ export class HomeComponent implements OnInit {
   }
 
 
-  // addtocart(item: any){
-  //   this.cartService.addtoCart(item);
-  // }
+  addtocart(item: any){
+    this.cartService.addtoCart(item);
+  }
 
 
 

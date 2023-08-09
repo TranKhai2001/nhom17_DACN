@@ -86,8 +86,8 @@
               <a routerLink="/product-detail/{{data[i].id}}" routerLinkActive="active" class="product-thumb">
                 <img src="{{data[i].img}}" alt="">
               </a>
-              <input routerLink="/pay"  routerLinkActive="active" type="button" value="mua ngay" class="btn-info">
-              <input type="button"  value="thêm vào giỏ hàng" class="btn-info1">
+              <input routerLink="/pay" (click)=addtocart(data[i])  routerLinkActive="active" type="button" value="mua ngay" class="btn-info">
+              <input type="button" (click)=addtocart(data[i])  value="thêm vào giỏ hàng" class="btn-info1">
             </div>
             <div class="product-info">
               <a href="" class="product-cat">{{data[i].type}}</a>
