@@ -28,18 +28,18 @@
               <th class="product-total">Tổng cộng</th>
             </tr>
             </thead>
-            <tbody  >
+            <tbody  *ngFor="let item of products; let i = index">
             <tr class="table-body-row">
-              <td class="product-remove"><a><i class="far fa-window-close"></i></a></td>
-              <td class="product-image"><img  alt=""></td>
-              <td class="product-name"></td>
-              <td class="product-price"> VNĐ</td>
-              <td class="product-quantity"><input type="number"></td>
-              <td class="product-total"> VNĐ</td>
+              <td class="product-remove"><a (click)="removeItem(item)"><i class="far fa-window-close"></i></a></td>
+              <td class="product-image"><img src="{{item.img}}" alt=""></td>
+              <td class="product-name">{{item.name}}</td>
+              <td class="product-price">{{item.rate}} VNĐ</td>
+              <td class="product-quantity"><input type="number" [(ngModel)]="item.num"  placeholder="{{item.num}}" (ngModelChange)="modelChanged(item)"></td>
+              <td class="product-total">{{getTotalPriceEeachProduct(item)}} VNĐ</td>
             </tr>
             </tbody>
             <tbody >
-            <tr >
+            <tr *ngIf="products.length ==0" class="table-body-row">
               <td colspan="6" style="color: red">không có sản phẩm trong giỏ hàng!</td>
             </tr>
             </tbody>
@@ -59,15 +59,15 @@
             <tbody>
             <tr class="total-data">
               <td><strong>Tạm tính: </strong></td>
-              <td> VNĐ</td>
+              <td>{{getTotalMoneyCart()}} VNĐ</td>
             </tr>
             <tr class="total-data">
               <td><strong>Phí ship: </strong></td>
-              <td> VNĐ</td>
+              <td>{{getFeeShip()}} VNĐ</td>
             </tr>
             <tr class="total-data">
               <td><strong>Tổng cộng: </strong></td>
-              <td>VNĐ</td>
+              <td>{{getTotalFinalFee()}} VNĐ</td>
             </tr>
             </tbody>
           </table>
