@@ -3,10 +3,10 @@
     <ul class="account">
       <li><a ><p>Thông báo</p></a></li>
       <li><a ><p>Hỗ trợ</p></a></li>
-      <li><a routerLink="/login" routerLinkActive="active" ><p>Đăng nhập</p></a></li>
-      <li><a routerLink="/register" routerLinkActive="active" ><p>Đăng ký</p></a></li>
-      <li><a routerLink="/user-profile" routerLinkActive="active" ><p>Xin chào:</p></a></li>
-      <li><a routerLinkActive="active"><p>Thoát</p></a></li>
+      <li><a routerLink="/login" routerLinkActive="active" *ngIf="!loggined()" ><p>Đăng nhập</p></a></li>
+      <li><a routerLink="/register" routerLinkActive="active" *ngIf="!loggined()"><p>Đăng ký</p></a></li>
+      <li><a routerLink="/user-profile" routerLinkActive="active" *ngIf="loggined()"><p>Xin chào: {{getUserCurrent()}}</p></a></li>
+      <li><a routerLinkActive="active" *ngIf="loggined()" (click)="logOut()"><p>Thoát</p></a></li>
     </ul>
   </div>
   <div class="two">
@@ -49,7 +49,7 @@
       <li><a routerLink="/blogs" routerLinkActive="active"><p>Blogs</p></a></li>
       <div class="search"><input type="text" placeholder="Tìm kiếm"></div>
       <div class="icon-search"> <button><i class="fas fa-search"></i></button></div>
-      <a routerLink="/cart" routerLinkActive="active"><div class="icon-cart"><i class="fas fa-shopping-cart"><span class='badge badge-warning' id='lblCartCount'></span></i></div></a>
+      <a routerLink="/cart" routerLinkActive="active"><div class="icon-cart"><i class="fas fa-shopping-cart"><span class='badge badge-warning' id='lblCartCount'>{{totalproductIncart()}}</span></i></div></a>
       <!--      <a routerLink="/login" routerLinkActive="active" *ngIf="!loggined()"><div class="icon-cart"><i class="fas fa-shopping-cart"><span class='badge badge-warning' id='lblCartCountNoLogin'>{{totalproductIncart()}}</span></i></div></a>-->
     </ul>
   </div>
