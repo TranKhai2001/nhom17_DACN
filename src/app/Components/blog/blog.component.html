@@ -5,11 +5,11 @@
     <!-- =====  BANNER STRAT  ===== -->
     <div class="col-sm-12">
       <div class="breadcrumb ptb_20">
-        <h1></h1>
+        <h1>{{title}}</h1>
         <ul>
           <li><a routerLink="/" routerLinkActive="active">Home</a></li>
           <li><a routerLink="/blogs" routerLinkActive="active">blogs</a></li>
-          <li class="active"></li>
+          <li class="active">{{title}}</li>
         </ul>
       </div>
     </div>
@@ -43,25 +43,25 @@
       <div class="row">
         <div class="blog-item listing-effect col-md-12 mb_50">
           <div class="post-format">
-            <div class="thumb post-img"><a href="assets/image/blog/blog_img_01.jpg" title="Beautiful Lady"> <img src=""  alt="themini"></a></div>
+            <div class="thumb post-img"><a href="assets/image/blog/blog_img_01.jpg" title="Beautiful Lady"> <img src="{{img}}"  alt="themini"></a></div>
             <div class="post-type"> <i class="fa fa-picture-o" aria-hidden="true"></i> </div>
           </div>
           <div class="post-info mtb_20" >
-            <h2 class="mb_10"> <a></a> </h2>
-            <p></p>
+            <h2 class="mb_10"> <a>{{title}}</a> </h2>
+            <p>{{startDetail}}</p>
           </div>
-          <blockquote></blockquote>
-
+          <blockquote>{{content}}</blockquote>
+          {{endDetail}}
           <div class="details mtb_20">
-            <div class="date"> <i class="fa fa-calendar" aria-hidden="true"></i> </div>
+            <div class="date"> <i class="fa fa-calendar" aria-hidden="true"></i>{{date}} </div>
           </div>
           <div class="author-about mt_50">
             <h3 class="author-about-title">Tác giả</h3>
             <div class="author mtb_30">
               <div class="author-avatar"> <img alt="" src="assets/image/user1.jpg"></div>
               <div class="author-body">
-                <h5 class="author-name"><a ></a></h5>
-                <div class="author-content mt_10"></div>
+                <h5 class="author-name"><a >{{author}}</a></h5>
+                <div class="author-content mt_10">{{des}}</div>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@
                   <div class="comment-main">
                     <h5 class="author-name"> <a href="" class="comment-name">Radley Lobortis</a> <small class="comment-date">8 ngày</small> </h5>
                     <div class="comment-reply pull-right"> <a ><i class="fa fa-reply" aria-hidden="true"></i> Phản hồi</a> </div>
-                    <div class="comment-content mt_10"></div>
+                    <div class="comment-content mt_10">{{title}}</div>
                   </div>
                 </article>
                 <hr>
@@ -86,7 +86,7 @@
                       <div class="comment-main">
                         <h5 class="author-name"> <a href="" class="comment-name">Lobortis Radley</a> <small class="comment-date">7 ngày</small> </h5>
                         <div class="comment-reply pull-right"> <a ><i class="fa fa-reply" aria-hidden="true"></i> Phản hồi</a> </div>
-                        <div class="comment-content mt_10"></div>
+                        <div class="comment-content mt_10">{{title}}</div>
                       </div>
                     </article>
                   </li>
@@ -97,9 +97,9 @@
                 <article class="comment-body mtb_20">
                   <div class="comment-avatar"> <img alt="" src="assets/image/user1.jpg"> </div>
                   <div class="comment-main">
-                    <h5 class="author-name"> <a  class="comment-name"></a> <small class="comment-date">8 ngày</small> </h5>
+                    <h5 class="author-name"> <a  class="comment-name">{{author}} </a> <small class="comment-date">8 ngày</small> </h5>
                     <div class="comment-reply pull-right"> <a ><i class="fa fa-reply" aria-hidden="true"></i> Phản hồi</a> </div>
-                    <div class="comment-content mt_10"></div>
+                    <div class="comment-content mt_10">{{des}}</div>
                   </div>
                 </article>
               </li>
