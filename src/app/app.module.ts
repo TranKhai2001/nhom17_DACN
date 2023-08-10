@@ -47,11 +47,17 @@ import { MdbMentionModule } from 'mdb-angular-mention';
 import { MdbCookiesManagementService } from 'mdb-angular-cookies-management';
 import { MdbStorageManagementService } from 'mdb-angular-storage-management';
 import { MdbOnboardingModule } from 'mdb-angular-onboarding';
+// @ts-ignore
 import { HeaderComponent } from './components/header/header.component';
+// @ts-ignore
 import { FooterComponent } from './components/footer/footer.component';
+// @ts-ignore
 import { LoginComponent } from './components/login/login.component';
+// @ts-ignore
 import { RegisterComponent } from './components/register/register.component';
+// @ts-ignore
 import { HomeComponent } from './components/home/home.component';
+// @ts-ignore
 import { ContactComponent } from './components/contact/contact.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrandsComponent } from './components/brands/brands.component';
@@ -60,8 +66,12 @@ import { BlogsComponent } from './components/blogs/blogs.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ChangePasswordComponent } from './components/change-password/change-password.component';
+
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+// @ts-ignore
+import { ApiService } from './path-to-your-api-service/api.service';
 import { CartComponent } from './components/cart/cart.component';
+// @ts-ignore
 import { CartItemsComponent } from './components/cart-items/cart-items.component';
 import { WatchesComponent } from './components/watches/watches.component';
 
@@ -74,56 +84,61 @@ import { PayComponent } from './Components/pay/pay.component';
 import { CommentComponent } from './Components/comment/comment.component';
 import { OrderConfirmedComponent } from './Components/order-confirmed/order-confirmed.component';
 
+
+
+
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, LoginComponent, RegisterComponent, HomeComponent, ContactComponent, BrandsComponent, WatchDetailComponent, BlogsComponent, ErrorComponent, ForgotPasswordComponent, ChangePasswordComponent, UserProfileComponent, CartComponent, CartItemsComponent, WatchesComponent, BlogComponent,ProductsComponent,ProductDetailComponent, PayComponent, CommentComponent, OrderConfirmedComponent],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MdbAccordionModule,
-        MdbAutocompleteModule,
-        MdbCarouselModule,
-        MdbChartModule,
-        MdbCheckboxModule,
-        MdbCollapseModule,
-        MdbDatepickerModule,
-        MdbDropdownModule,
-        MdbFormsModule,
-        MdbInfiniteScrollModule,
-        MdbLazyLoadingModule,
-        MdbLightboxModule,
-        MdbLoadingModule,
-        MdbModalModule,
-        MdbNotificationModule,
-        MdbPopconfirmModule,
-        MdbPopoverModule,
-        MdbRadioModule,
-        MdbRangeModule,
-        MdbRatingModule,
-        MdbRippleModule,
-        MdbScrollbarModule,
-        MdbScrollspyModule,
-        MdbSelectModule,
-        MdbSidenavModule,
-        MdbSmoothScrollModule,
-        MdbStepperModule,
-        MdbStickyModule,
-        MdbTableModule,
-        MdbTabsModule,
-        MdbTimepickerModule,
-        MdbTooltipModule,
-        MdbValidationModule,
-        MdbCalendarModule,
-        MdbWysiwygModule,
-        MdbDragAndDropModule,
-        MdbVectorMapModule,
-        MdbFileUploadModule,
-        MdbTreeviewModule,
-        MdbTransferModule,
-        MdbMentionModule,
-        MdbOnboardingModule,
-        AppRoutingModule,
-        BrowserModule, NgxPaginationModule, ReactiveFormsModule, FormsModule
-    ],
+  imports: [
+    FormsModule, // Đảm bảo bạn đã thêm FormsModule vào đây
+    ReactiveFormsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MdbAccordionModule,
+    MdbAutocompleteModule,
+    MdbCarouselModule,
+    MdbChartModule,
+    MdbCheckboxModule,
+    MdbCollapseModule,
+    MdbDatepickerModule,
+    MdbDropdownModule,
+    MdbFormsModule,
+    MdbInfiniteScrollModule,
+    MdbLazyLoadingModule,
+    MdbLightboxModule,
+    MdbLoadingModule,
+    MdbModalModule,
+    MdbNotificationModule,
+    MdbPopconfirmModule,
+    MdbPopoverModule,
+    MdbRadioModule,
+    MdbRangeModule,
+    MdbRatingModule,
+    MdbRippleModule,
+    MdbScrollbarModule,
+    MdbScrollspyModule,
+    MdbSelectModule,
+    MdbSidenavModule,
+    MdbSmoothScrollModule,
+    MdbStepperModule,
+    MdbStickyModule,
+    MdbTableModule,
+    MdbTabsModule,
+    MdbTimepickerModule,
+    MdbTooltipModule,
+    MdbValidationModule,
+    MdbCalendarModule,
+    MdbWysiwygModule,
+    MdbDragAndDropModule,
+    MdbVectorMapModule,
+    MdbFileUploadModule,
+    MdbTreeviewModule,
+    MdbTransferModule,
+    MdbMentionModule,
+    MdbOnboardingModule,
+    AppRoutingModule,
+    BrowserModule, NgxPaginationModule, ReactiveFormsModule, FormsModule
+  ],
   providers: [MdbCookiesManagementService, MdbStorageManagementService],
   bootstrap: [AppComponent],
 })

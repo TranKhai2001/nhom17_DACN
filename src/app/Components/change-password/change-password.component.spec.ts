@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+// @ts-ignore
 import { ChangePasswordComponent } from './change-password.component';
 
 describe('ChangePasswordComponent', () => {
@@ -10,7 +11,7 @@ describe('ChangePasswordComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ChangePasswordComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
