@@ -19,17 +19,17 @@
           </div>
           <div class="Infor-Customer">
             <p>Họ tên:</p>
-            <input type="text" value="">
+            <input type="text" value="{{hoten}}">
             <p>Số điện thoại: </p>
-            <input type="text" value="">
+            <input type="text" value="{{sdt}}">
             <p>Tỉnh/Thành phố:</p>
-            <input type="text" value="">
+            <input type="text" value="{{thanhpho}}">
             <p>Quận/Huyện:</p>
-            <input type="text" value="">
+            <input type="text" value="{{huyen}}">
             <p>Phường/Xã:</p>
-            <input type="text" value="">
+            <input type="text" value="{{xa}}">
             <p>Địa chỉ nhận hàng:</p>
-            <input type="text" value="">
+            <input type="text" value="{{diachi}}">
           </div>
         </div>
       </div>
@@ -38,31 +38,31 @@
           <div class="Title-Product">
             <h2>Đơn hàng của bạn:</h2>
           </div>
-          <div class="Product-Element" >
-            <img src="" alt="">
+          <div class="Product-Element" *ngFor="let item of products; let i = index">
+            <img src="{{item.img}}" alt="">
             <div class="Infor-Product">
-              <p class="Name-Product"></p>
-              <p class="Price" style="float: right">x</p>
-              <p class="Price" style="float: right"> VNĐ</p>
+              <p class="Name-Product">{{item.name}}</p>
+              <p class="Price" style="float: right">x{{item.num}}</p>
+              <p class="Price" style="float: right">{{item.rate}} VNĐ</p>
             </div>
           </div>
           <div class="Money-Element">
             <div class="Money">
               <p>Tổng tiền sản phẩm:</p>
-              <p class="Price"> VNĐ</p>
+              <p class="Price">{{getTotalMoneyCart()}} VNĐ</p>
             </div>
             <div class="Money">
               <p>Phí giao hàng:</p>
-              <p class="Price"> VNĐ</p>
+              <p class="Price">{{getFeeShip()}} VNĐ</p>
             </div>
           </div>
           <div class="Total-Money">
             <div class="Money">
               <p>Tổng tiền:</p>
-              <p class="Price"> VNĐ</p>
+              <p class="Price">{{getTotalFinalFee()}} VNĐ</p>
             </div>
           </div>
-          <div class="Button" routerLink="/order-confirmed" routerLinkActive="active"  >
+          <div class="Button" routerLink="/order-confirmed" routerLinkActive="active"  (click)="order()">
             <p>Đặt hàng</p>
           </div>
         </div>
