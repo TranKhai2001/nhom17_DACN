@@ -8,6 +8,8 @@ import  {Comment} from "../models/comment";
   providedIn: 'root'
 })
 export class ApiService {
+  private apiUrl = 'http://localhost:3000/users';
+
   getProductByName(title: any) {
     return this.http.get<Product>("http://localhost:3000/products/"+title);
   }
@@ -99,4 +101,18 @@ export class ApiService {
       productID:1,
     });
   }
+
+  changePassword(userId: number, newPassword: string): Observable<any> {
+    const user = {
+      user_password: newPassword
+    };
+
+    return this.http.put(`${this.apiUrl}/users/${userId}`, user);
+  }
+
+  updateUserInfo(id: number, data: any) {
+    return this.http.put<any>(`${this.apiUrl}/${id}`, data);
+  }
+
+
 }
