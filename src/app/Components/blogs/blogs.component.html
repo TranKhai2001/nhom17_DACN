@@ -42,18 +42,22 @@
       <div class="col-sm-8 col-lg-9 mtb_20">
         <div class="row">
           <div class="three-col-blog text-left" >
-            <div class="blog-item col-md-6 mb_30" >
+            <div class="blog-item col-md-6 mb_30" *ngFor="let blog of  data| paginate: {
+                    id:'product_pagination',
+                 itemsPerPage: 6,
+                 currentPage: page1,
+                totalItems: totalBlogs }">
 
               <div class="post-format">
-                <div class="thumb post-img"><a routerLink="/blogs/" routerLinkActive="active"> <img src=""  alt="themini"></a></div>
+                <div class="thumb post-img"><a routerLink="/blogs/{{blog.id}}" routerLinkActive="active"> <img src="{{blog.img}}"  alt="themini"></a></div>
                 <div class="post-type"><i class="fa fa-music" aria-hidden="true"></i></div>
               </div>
               <div class="post-info mtb_20 ">
-                <h3 class="mb_10"> <a routerLink="/blogs/" routerLinkActive="active"></a> </h3>
-                <p></p>
+                <h3 class="mb_10"> <a routerLink="/blogs/{{blog.id}}" routerLinkActive="active">{{blog.title}}</a> </h3>
+                <p>{{blog.decription}}</p>
                 <div class="details mtb_20">
-                  <div class="date pull-left"> <i class="fa fa-calendar" aria-hidden="true"></i></div>
-                  <div class="more pull-right"> <a routerLink="/blogs/" routerLinkActive="active">Độc tiếp <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></div>
+                  <div class="date pull-left"> <i class="fa fa-calendar" aria-hidden="true">{{blog.date}}</i></div>
+                  <div class="more pull-right"> <a routerLink="/blogs/{{blog.id}}" routerLinkActive="active">Độc tiếp <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></div>
                 </div>
               </div>
             </div>

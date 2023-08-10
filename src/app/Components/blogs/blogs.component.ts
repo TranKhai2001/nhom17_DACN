@@ -11,9 +11,21 @@ import {ApiService} from "../../service/api.service";
 })
 export class BlogsComponent implements OnInit {
 
+  data:Array<any> = [];
+  totalBlogs:number=0;
+  page1:number=1;
+  page2:number=1;
+  constructor(private router:Router,private http:HttpClient,private apiService:ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.getBlogs().subscribe(
+      (resp) => {
+        this.data = resp;
+        console.log(this.data);
+        this.totalBlogs = this.data.length;
+      }
 
+    );
   }
 
 }
